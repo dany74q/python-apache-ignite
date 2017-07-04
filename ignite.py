@@ -274,7 +274,7 @@ def IgniteResponse(resp_dict):
         raise IgniteAuthorizationFailed(error)
     elif success_status == 3:
         raise IgniteSecurityCheckFailed(error)
-    elif success_status == 1 or error != u'':
+    elif success_status == 1 or error != None:
         raise IgniteFailed(error)
 
     return response
